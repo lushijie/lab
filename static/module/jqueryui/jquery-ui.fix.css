@@ -1,0 +1,130 @@
+/* dialog 个性化样式 dialog.js */
+.dialog-tj-alert {}
+.dialog-tj-confirm {}
+.dialog-tj-popup {}
+
+
+/* 修改dialog 主题样式 */
+.ui-dialog {
+    padding: 0;
+    border: 1px solid #2a3544;
+    border: 0;
+    border-radius: 5px;
+}
+.ui-dialog a:focus,
+.ui-dialog button:focus {
+    outline: none;
+}
+.ui-dialog a:hover {
+    color: #78cd51;
+}
+.ui-dialog .ui-dialog-content {
+    background: #fff;
+    padding: 40px 30px;
+}
+.ui-dialog .ui-widget-content{
+  border: none;
+}
+
+/*title-bar*/
+.ui-dialog .ui-dialog-titlebar .ui-button {
+    border: 0;
+    right: 20px;
+    background: none;
+}
+.ui-dialog .ui-dialog-titlebar .ui-button .ui-icon-closethick {
+    margin: -10px 0 0 -10px;
+    width: 21px;
+    height: 21px;
+    background: url(../../img/common/icon-close.png) center no-repeat transparent;
+}
+.ui-dialog .ui-dialog-titlebar .ui-state-hover .ui-icon-closethick{
+    /*background: url(../../img/common/icon-close-hover.png) center no-repeat transparent;*/
+}
+.ui-dialog .ui-dialog-titlebar .ui-button .ui-button-text{
+    display: none;
+}
+.ui-dialog .ui-dialog-titlebar{
+    padding: 0 80px 0 20px;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #D5D5D5;
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: #00A051;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/*button*/
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+  display: table;
+  margin: 0 auto;
+  float: none;
+}
+.ui-dialog .ui-dialog-buttonpane {
+    margin: 0;
+    padding: 0 0 40px 0;
+    background: #fff;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-button-text {
+    padding: 0;
+    color: #fff;
+    font-size: 16px;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-button {
+    margin: 0;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 50px;
+    color: #fff;
+    background: #bfc2cd;
+    border: 0;
+    border-radius: 3px;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-button:hover {
+    background: #bfc2cd;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-button:active {
+    background: #bfc2cd;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-button-ok {
+    background: #00A14E;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-button-ok:hover {
+    background: #00A14E;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-button-ok:active{
+    background: #00A14E;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-state-disabled,
+.ui-dialog .ui-dialog-buttonpane .ui-state-disabled:hover,
+.ui-dialog .ui-dialog-buttonpane .ui-state-disabled:active {
+    background-color: #969ba0;
+    margin-left: 40px;
+}
+.dialog-tj-confirm .ui-dialog-buttonpane .ui-button-ok {
+  margin-right: 40px;
+}
+.dialog-tj-popyes .ui-dialog-buttonpane .ui-button-ok {
+  margin-right: 0;
+}
+
+/* 遮罩 */
+.ui-widget-overlay {
+    background-image: none;
+    background-color: #000;
+    opacity: 0.7;
+}
+.ie6 .ui-widget-overlay,
+.ie7 .ui-widget-overlay,
+.ie8 .ui-widget-overlay {
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+
+
+
+

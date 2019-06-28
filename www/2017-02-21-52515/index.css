@@ -1,0 +1,94 @@
+/*
+* @Author: lushijie
+* @Date:   2016-11-29 10:41:34
+* @Last Modified by:   lushijie
+* @Last Modified time: 2017-02-21 17:16:05
+*/
+@charset 'UTF-8';
+
+.sj-tab__nav {
+  background-color: #e3efe1;
+}
+.sj-tab__nav__li {
+  color: #696;
+  float: left;
+  padding: 5px 10px;
+  list-style: none;
+  cursor: pointer;
+}
+.sj-tab__nav__li--active {
+  color: #fff;
+  background-color: #a1ca9a
+}
+.sj-tab__content__sub {
+  display: none;
+}
+
+.sj-tab__content__sub--active {
+  display: block;
+}
+
+.sj-pager {
+  text-align: center;
+  padding: 20px 0;
+}
+.sj-pager__normal {
+  cursor: pointer;
+  border: 1px solid #bfbfbf;
+  display: inline-block;
+  padding: 2px 8px;
+  vertical-align: middle;
+  margin: 0 3px;
+  border-radius: 3px;
+}
+.sj-pager__normal--current {
+  cursor: default;
+  background: #01a050;
+  color: #fff;
+  border-color: #01a050;
+}
+.sj-pager__normal--current:hover {
+  color: #fff;
+}
+.sj-pager__normal--ellipsis {
+  cursor: default;
+}
+.sj-pager__normal--disabled {
+  cursor: default;
+  background: #d2d2d2;
+  color: #fff;
+}
+.sj-pager__normal--disabled:hover {
+  color: #fff;
+}
+.sj-pager__pagesize {
+  display: inline-block;
+}
+
+
+.sj-table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.sj-table th {
+  color: #666;
+  background-color: #ededed;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.sj-table td {
+  border: 1px solid #ccc;
+  border-width: 0 0 1px 1px;
+  padding: 5px 15px;
+  vertical-align: middle;
+  word-break: break-word;
+}
+.sj-table tbody tr:hover {
+  background: #fffbe1;
+}
+.sj-table tbody tr {
+  border: 1px solid #ccc;
+  /*border-width: 1px 1px 1px 1px;*/
+}

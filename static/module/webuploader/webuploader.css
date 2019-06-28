@@ -1,0 +1,116 @@
+.webuploader-container {
+	position: relative;
+}
+.webuploader-element-invisible {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px,1px,1px,1px);
+}
+.webuploader-pick {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	background: #00b7ee;
+	padding: 10px 15px;
+	color: #fff;
+	text-align: center;
+	border-radius: 3px;
+	overflow: hidden;
+}
+.webuploader-pick-hover {
+	background: #00a2d4;
+}
+
+.webuploader-pick-disable {
+	opacity: 0.6;
+	pointer-events:none;
+}
+
+/* webuploader*/
+body .webuploader-pick {
+    font-size: 14px;
+    line-height: 30px;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    color: #fff;
+    border-radius: 0;
+    background-color: #00a050;
+}
+body .webuploader-pick.webuploader-pick-hover {
+    color: #fff;
+    background-color: #00a050;
+}
+body .webuploader-pick-disabled {
+    color: #b7b5b5;
+    background: #e2e2e2;
+}
+body .webuploader-pick-disabled.webuploader-pick-hover {
+    color: #b7b5b5;
+    background: #e2e2e2;
+}
+body .webuploader-pick-disabled + div .webuploader-element-invisible {
+    cursor: default;
+}
+
+.sj-upload--hidden {
+  margin-left: -999999px;
+  height: 1px;
+  overflow: hidden;
+}
+.sj-upload__title {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+.sj-upload__content {
+  position: relative;
+}
+.sj-upload__content__filename {
+    font-size: 14px;
+    overflow: hidden;
+    max-width: 200px;
+    height: 28px;
+    margin-right: 10px;
+    padding: 0 5px;
+    white-space: nowrap;
+    text-indent: 0;
+    text-overflow: ellipsis;
+}
+.sj-upload__content__filename.uploading {
+    text-indent: 18px;
+}
+.sj-upload__content__icon {
+    position: absolute;
+    top: 9px;
+    left: 6px;
+    display: none;
+}
+.sj-upload__content__process {
+    font-size: 13px;
+    color: #737373;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.sj-upload__content__process .upload-tips {
+    display: inline-block;
+    vertical-align: middle;
+}
+.sj-upload__content__process .upload-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    margin: -2px 5px 0 0 ;
+    background: url(../../img/loading.gif) center center no-repeat transparent;
+}
+.sj-upload__content__result {
+    font-size: 13px;
+    color: #737373;
+}
+.sj-upload__content__result .upload-success {
+    color: #0a0;
+}
+.sj-upload__content__result .upload-error {
+    color: #f00;
+}

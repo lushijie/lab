@@ -1,0 +1,24 @@
+/*
+* @Author: lushijie
+* @Date:   2016-11-29 10:41:34
+* @Last Modified by:   lushijie
+* @Last Modified time: 2017-01-10 17:05:53
+*/
+@charset 'UTF-8';
+body {
+  width: 960px;
+  margin: 0 auto;
+}
+h4 {
+  margin: 0;
+  color: #a30;
+  padding-top: 10px;
+  border-top: 1px solid #dcd;
+}
+p {
+  margin: 0;
+  margin-bottom: 30px;
+}
+#app {
+  padding-bottom: 60px;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>垂直居中</title>
+    <link rel="stylesheet" href="../../static/module/jqueryui/jquery-ui.css">
+    <link rel="stylesheet" href="../../static/module/jqueryui/jquery-ui.fix.css">
+    <link rel="stylesheet" href="../../static/css/lib/font-awesome.css">
+    <link rel="stylesheet" href="../../static/css/lib/pure.css">
+    <link rel="stylesheet" href="../../static/css/common/common.css">
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <!-- todo -->
+    <h2>单行内容的居中</h2>
+    <div style="height: 30px; width: 100px; line-height: 30px; overflow: hidden; background-color: #778;">
+      <!-- line-height: 100% ;参照是元素自身的font-size。
+        例如，一个元素的font-size是12px，那么line-height:150%;
+        的效果是line-height:18px;
+      -->
+      同时支持块级和内联极元素
+      但是只能显示一行
+    </div>
+
+    <h2>多行内容居中，且容器高度可变</h2>
+    <div style="padding: 40px 0; background-color: #9ab; width: 100px;">
+      同时支持块级和内联极元素
+      但是容器不能固定高度
+    </div>
+
+
+    <h2>把容器当作表格单元 table-cell</h2>
+    <div style="display: table-cell; vertical-align: middle; height: 300px; background-color: #9ab; width: 100px;">
+      同时支持块级和内联极元素
+      但是容器不能固定高度
+    </div>
+
+    <h2>position 定位</h2>
+    <div style="height: 400px; background-color: #abc">
+      <div style="position: relative; top: 50%; left: 0;">
+        <div style="position: relative; top: 50%; left: 0">
+          A  选择器都有一个权值，权值越大越优先；
+          B  当权值相等时，后出现的样式表设置要优于先出现的样式表设置；
+          C  创作者的规则高于浏览者：即网页编写者设置的CSS 样式的优先权高于浏览器所设置的样式；
+          D  继承的CSS 样式不如后来指定的CSS 样式；
+          E  在同一组属性设置中标有“!important”规则的优先级最大
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="./stc.js"></script>
+  </body>
+</html>

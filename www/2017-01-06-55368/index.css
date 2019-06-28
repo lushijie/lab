@@ -1,0 +1,10 @@
+/*
+* @Author: lushijie
+* @Date:   2016-11-29 10:41:34
+* @Last Modified by:   lushijie
+* @Last Modified time: 2017-01-06 15:23:44
+*/
+@charset 'UTF-8';
+.test-grid .test-grid-a p{
+  border: 1px solid #f00;
+}

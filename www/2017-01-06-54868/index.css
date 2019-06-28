@@ -1,0 +1,38 @@
+/*
+* @Author: lushijie
+* @Date:   2016-11-29 10:41:34
+* @Last Modified by:   lushijie
+* @Last Modified time: 2017-01-06 15:15:35
+*/
+@charset 'UTF-8';
+
+
+.wrap {
+  margin-top: 60px;
+}
+
+.wrap1 {
+  height: 200px;
+  background-color: #987;
+  text-align: center;
+}
+.wrap1 .span1-2 {
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  background-color: #bbb;
+}
+
+.wrap1 .div1 {
+  /*继承了text-align属性*/
+  width: 200px;
+  background-color: #8fa;
+}
+
+.wrap1 .div2 {
+  position: relative;
+  left: 50%;
+  margin-left: -100px;
+  width: 200px;
+  background-color: #8fa;
+}

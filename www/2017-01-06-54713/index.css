@@ -1,0 +1,61 @@
+/*
+* @Author: lushijie
+* @Date:   2016-11-29 10:41:34
+* @Last Modified by:   lushijie
+* @Last Modified time: 2017-01-06 15:12:21
+*/
+@charset 'UTF-8';
+
+@-webkit-keyframes upyourscache1402729634748 {
+    0% {
+        -webkit-transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg)
+    }
+    100% {
+        -webkit-transform: rotateZ(360deg) rotateX(360deg) rotateY(3600deg) ;
+    }
+}
+
+#cube {
+    position: relative;
+    margin: 100px auto 0 auto;
+    height: 200px;  width: 200px;
+    background-color: rgba(119,178,137,0.4);
+    /*-webkit-perspective: 1000px;*/
+    -webkit-transform-style: preserve-3d;
+    /*-webkit-perspective-origin: 50% 50%;*/
+    -webkit-animation: upyourscache1402729634748 20s infinite linear;
+}
+.subbox{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255,171,151,0.5);
+    border: 1px solid #000000;
+    text-align: center;
+    font-size: 150px;
+    font-weight: 700;
+    line-height: 200px;
+    -webkit-backface-visibility: visible;
+}
+
+#box1 {
+    -webkit-transform:translateZ(100px);
+}
+#box6 {
+    -webkit-transform:translateZ(-100px);
+}
+#box2 {
+    -webkit-transform: rotateX(90deg) translateZ(100px) ;
+}
+
+#box5 {
+    -webkit-transform: rotateX(270deg) translateZ(100px);
+}
+
+#box3 {
+    -webkit-transform:rotateY(90deg) translateZ(100px)   ;
+}
+#box4 {
+    -webkit-transform:  rotateY(270deg) translateZ(100px);
+}
+

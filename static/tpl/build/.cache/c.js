@@ -1,0 +1,2 @@
+/*TMODJS:{"version":4,"md5":"ce1850032f24050841489768dac5a434"}*/
+template('c','<!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8"> <script type="text/javascript" src="./build/template.js"></script> </head> <body> <script type="text/javascript"> var html = template(\'a\', {title: 123123}) console.log(html); </script> </body> </html> ');

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>vue 基础</title>
+    <link rel="stylesheet" href="../../static/module/jqueryui/jquery-ui.css">
+    <link rel="stylesheet" href="../../static/module/jqueryui/jquery-ui.fix.css">
+    <link rel="stylesheet" href="../../static/css/lib/font-awesome.css">
+    <link rel="stylesheet" href="../../static/css/lib/pure.css">
+    <link rel="stylesheet" href="../../static/css/common/common.css">
+    <link rel="stylesheet" href="./index.css">
+
+    <script type="text/javascript" src="../../static/js/lib/vue.js"></script>
+  </head>
+  <body>
+    <h3 style="text-align: center;">vue</h3>
+    <div id="app">
+
+      <h4>文本插值,模板表达式</h2>
+      <p v-bind:id="'id' + a" v-bind:class="{active: a}" v-bind:style="{color:'red'}">{{a + 1}}</p>
+
+      <h4> v-if 指令将根据表达式 a 的值的真假来移除/插入元素 </h4>
+      <p v-if="a">Now You Can See me</p>
+      <p v-else>You Can't See me</p>
+
+      <h4> 输出真正的 HTML </h4>
+      <p v-html="danger_html"></p>
+
+      <h4> v-bind </h4>
+      <p>
+        <a :href="{url}" class="tset">{{url}}</a>
+      </p>
+
+      <h4> Filter </h4>
+      <p>{{url | capitalize}}</p>
+
+      <h4> 计算属性,依赖于缓存 </h4>
+      <p>{{reversedURL}}</p>
+
+      <h4> Methods </h4>
+      <p>{{reverseURL2()}}</p>
+
+      <h4>v-for  item [in|of] for_items</h4>
+      <p>
+        <ul id="example-1">
+          <li v-for="(item, index) in for_items">
+            {{index}}--{{ item.message }}
+          </li>
+        </ul>
+      </p>
+
+      <h4>template v-for</h4>
+      <p>
+        <ul id="example-1">
+          <template v-for="(item, index) of for_items">
+            <li>
+              {{index}}
+            </li>
+            <li>
+              {{ item.message }}
+            </li>
+          </template>
+        </ul>
+      </p>
+
+      <h4>{{'Array'}}</h4>
+      <p>{{for_items}}</p>
+
+      <h4>event</h4>
+      <p>
+        <button v-on:click.prevent="handleClickTest">
+          测试
+        </button>
+      </p>
+
+      <h4>表单测试</h4>
+      <p>
+        <input type="text" name="name1701" v-model.trim="url" placeholder="url">
+      </p>
+
+      <p>
+        <textarea v-model="url" placeholder="add multiple lines"></textarea>
+      </p>
+
+      <p>
+        <input type="checkbox" id="sc1" v-model="s_checked">
+        <label for="sc1">单选值:{{ s_checked }}</label>
+      </p>
+
+      <p>
+         <input type="checkbox" id="jack" value="Jack" v-model="m_checked">
+         <label for="jack">Jack</label>
+         <input type="checkbox" id="john" value="John" v-model="m_checked">
+         <label for="john">John</label>
+         <input type="checkbox" id="mike" value="Mike" v-model="m_checked">
+         <label for="mike">Mike</label>
+         <br>
+         <span>多选值: {{ m_checked }}</span>
+      </p>
+
+      <p>
+        <input type="radio" id="one" value="One" v-model="r_picked">
+        <label for="one">One</label>
+        <br>
+        <input type="radio" id="two" value="Two" v-model="r_picked">
+        <label for="two">Two</label>
+        <br>
+        <span>多选1: {{ r_picked }}</span>
+      </p>
+
+
+      <p>
+        <select v-model="selected.default">
+          <option v-for="option in selected.options" v-bind:value="option.value">
+            {{ option.text }}
+          </option>
+        </select>
+        <span>Selected: {{ selected.default }}</span>
+      </p>
+
+    </div>
+
+    <script type="text/javascript">
+      var vm = new Vue({
+        el: '#app',
+        data: {
+          a: 1,
+          danger_html: '<span style="color:red">12313</span>',
+          url: 'http://www.baidu.com',
+          for_items: [
+            {message: 'Foo' },
+            {message: 'Bar' }
+          ],
+          s_checked: true,
+          m_checked: ['John'],
+          r_picked: 'One',
+          selected: {
+            default: 'B',
+            options: [
+              { text: 'One', value: 'A' },
+              { text: 'Two', value: 'B' },
+              { text: 'Three', value: 'C' }
+            ]
+          }
+        },
+        computed: {
+          reversedURL: function() {
+            return (this.url|| '').split('').reverse().join('');
+          },
+        },
+        methods: {
+          handleClickTest(evt) {
+            console.log(evt.target.tagName);
+            this.a ++;
+          },
+          reverseURL2: function () {
+             return this.url.split('').reverse().join('')
+          }
+        },
+        filters: {
+          capitalize: function(value) {
+            if (!value) return ''
+            value = value.toString()
+            return value.charAt(0).toUpperCase() + value.slice(1)
+          }
+        },
+        created: function() {},
+        mounted: function() {},
+        updated: function() {},
+        destroyed: function() {}
+      });
+      console.log(vm.a);
+      console.log(vm.$data);
+    </script>
+    <script type="text/javascript" src="./stc.js"></script>
+  </body>
+</html>

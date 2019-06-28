@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>localStorage记忆三级导航</title>
+    <link rel="stylesheet" href="../../static/module/jqueryui/jquery-ui.css">
+    <link rel="stylesheet" href="../../static/module/jqueryui/jquery-ui.fix.css">
+    <link rel="stylesheet" href="../../static/css/lib/font-awesome.css">
+    <link rel="stylesheet" href="../../static/css/lib/pure.css">
+    <link rel="stylesheet" href="../../static/css/common/common.css">
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+
+    <!-- todo -->
+    <div class="nav-menu">
+      <ul class="level level-1">
+        <li>类目1</li>
+        <li>
+          类目2
+          <ul class="level level-2 level--close">
+            <li>类目2-1</li>
+            <li>类目2-2</li>
+          </ul>
+        </li>
+        <li>
+          类目3
+          <ul class="level level-2 level--close">
+            <li>
+              类目3-1
+              <ul class="level level-3 level--close">
+                <li>类目3-1-1</li>
+                <li>类目3-1-2</li>
+              </ul>
+            </li>
+            <li>
+              类目3-2
+              <ul class="level level-3 level--close">
+                <li>类目3-2-1</li>
+                <li>类目3-2-2</li>
+              </ul>
+            </li>
+            <li>类目3-3</li>
+          </ul>
+        </li>
+        <li>类目4</li>
+      </ul>
+    </div>
+
+    <script type="text/javascript" src="./stc.js"></script>
+  </body>
+</html>

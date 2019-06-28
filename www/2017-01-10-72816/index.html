@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>vue 组件通信</title>
+    <link rel="stylesheet" href="../../static/module/jqueryui/jquery-ui.css">
+    <link rel="stylesheet" href="../../static/module/jqueryui/jquery-ui.fix.css">
+    <link rel="stylesheet" href="../../static/css/lib/font-awesome.css">
+    <link rel="stylesheet" href="../../static/css/lib/pure.css">
+    <link rel="stylesheet" href="../../static/css/common/common.css">
+    <link rel="stylesheet" href="./index.css">
+    <script type="text/javascript" src="../../static/js/lib/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 全局组件 -->
+      <div id="global">
+        <!-- 动态prop -->
+        <input type="text" v-model="prop3" />
+        <g-component v-bind:p3="prop3"/>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var bus = new Vue()
+      // 全局组件
+      Vue.component('g-component', {
+        //props: ['p3'],
+        props: {
+          p3: [String, Number]
+        },
+        data: function() {
+          return {
+            initText: this.p3
+          }
+        },
+        methods: {
+          click_child: function(evt){
+            bus.$emit('click_child', evt);
+          }
+        },
+        template: '<button v-on:click="click_child">{{initText}} - {{p3}}</button>'
+      })
+
+
+      // Vue
+      new Vue({
+        el: '#app',
+        data: {
+          prop3: 'global'
+        },
+        methods: {
+
+        },
+        mounted: function() {
+          bus.$on('click_child', function(evt) {
+            console.log('type',evt.target.tagName);
+          });
+        },
+      })
+
+    </script>
+    <script type="text/javascript" src="./stc.js"></script>
+  </body>
+</html>

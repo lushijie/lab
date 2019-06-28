@@ -1,0 +1,42 @@
+/*
+* @Author: lushijie
+* @Date:   2016-11-29 10:41:34
+* @Last Modified by:   lushijie
+* @Last Modified time: 2017-01-06 15:05:18
+*/
+@charset 'UTF-8';
+
+body {
+  min-height: 300px;
+  position: relative;
+  background-color: #f5f5f5;
+}
+/*头部*/
+#hd {
+  height: 50px;
+  color: #fff;
+  background-color: #181818;
+}
+/*页面主体*/
+#bd {
+  position: relative;
+  background-color: #F5F5F5;
+  width: 100%;
+  /*此处为了兼容使用js控制*/
+  /*min-height: calc(100% - 50px);*/
+}
+/*主体——左侧导航*/
+#bd-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 205px;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #EBEFF2;
+}
+/*主体——右侧内容*/
+#bd-content{
+  padding-left: 205px;
+  height: 20px;
+}

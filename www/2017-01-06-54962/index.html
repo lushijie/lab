@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>清除浮动</title>
+    <link rel="stylesheet" href="../../static/module/jqueryui/jquery-ui.css">
+    <link rel="stylesheet" href="../../static/module/jqueryui/jquery-ui.fix.css">
+    <link rel="stylesheet" href="../../static/css/lib/font-awesome.css">
+    <link rel="stylesheet" href="../../static/css/lib/pure.css">
+    <link rel="stylesheet" href="../../static/css/common/common.css">
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+
+    <!-- todo -->
+    <div class="outer outer1" style="background-color: #ccc">
+      <div class="inner" style="background-color: #936; float: left; height: 200px;">
+        this is inner
+      </div>
+      <h1>content</h1>
+      <p>Lorem ipsum</p>
+    </div>
+
+    1.为了 inner 之后的 h1 与 innner 显示在一行，对 inner float:left
+    2.如果 inner的宽度和高度都比 outer 小，这不会有问题
+    3.但是 inner 的高度超过了 outer，那么的底部就会超出 outer 的底部
+    4.这是因为我们为 inner 设定了 float 属性后，它就会脱离的文本流，无论其宽度和高度怎么变化都不会使 outer 跟随变化
+
+
+
+    <div style="clear: both;"></div>
+
+
+
+
+    <div class="outer outer2" style="background-color: #ccc">
+      <h2>解决方案1</h2>
+      <div class="inner" style="background-color: #936; float: left; height: 200px;">
+        this is inner
+      </div>
+      <h1>content</h1>
+      <p>Lorem ipsum</p>
+      <div style="clear: both;"></div>
+    </div>
+
+
+
+    <div style="clear: both;"></div>
+
+
+    <style type="text/css">
+      .outer3:after {
+        display: block;
+        visibility: hidden;
+        clear: both;
+        height: 0;
+        content: '';
+      }
+    </style>
+    <div class="outer outer3" style="background-color: #ccc">
+      <h2>解决方案2</h2>
+      <div class="inner" style="background-color: #936; float: left; height: 200px;">
+        this is inner
+      </div>
+      <h1>content</h1>
+      <p>Lorem ipsum</p>
+    </div>
+
+
+
+    <div style="clear: both;"></div>
+
+
+
+    <style type="text/css">
+      .outer4 {
+        overflow: auto;
+        width: 100%;
+      }
+    </style>
+    <div class="outer outer4" style="background-color: #ccc">
+      <h2>解决方案3</h2>
+      <div class="inner" style="background-color: #936; float: left; height: 200px;">
+        this is inner
+      </div>
+      <h1>content</h1>
+      <p>Lorem ipsum</p>
+    </div>
+
+    <script type="text/javascript" src="./stc.js"></script>
+  </body>
+</html>

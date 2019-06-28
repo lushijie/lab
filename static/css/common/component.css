@@ -1,0 +1,175 @@
+/*---组件样式---*/
+/*.sj-pager */
+.sj-pager {
+  text-align: center;
+  padding: 20px 0;
+}
+.sj-pager .page {
+  cursor: pointer;
+  border: 1px solid #bfbfbf;
+  display: inline-block;
+  padding: 2px 8px;
+  vertical-align: middle;
+  margin: 0 3px;
+  border-radius: 3px;
+}
+.sj-pager .page.current {
+  cursor: default;
+  background: #01a050;
+  color: #fff;
+  border-color: #01a050;
+}
+.sj-pager .page.ellipsis {
+  cursor: default;
+}
+.sj-pager .page.disabled {
+  cursor: default;
+  background: #d2d2d2;
+  color: #fff;
+}
+
+/* webuploader*/
+body .webuploader-pick {
+    font-size: 14px;
+    line-height: 30px;
+    height: 30px;
+    padding: 0 10px;
+    text-align: center;
+    color: #fff;
+    border-radius: 0;
+    background-color: #00a050;
+}
+body .webuploader-pick.webuploader-pick-hover {
+    color: #fff;
+    background-color: #00a050;
+}
+body .webuploader-pick-disabled {
+    color: #b7b5b5;
+    background: #e2e2e2;
+}
+body .webuploader-pick-disabled.webuploader-pick-hover {
+    color: #b7b5b5;
+    background: #e2e2e2;
+}
+body .webuploader-pick-disabled + div .webuploader-element-invisible {
+    cursor: default;
+}
+.upload-box .upload-title {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+.upload-box .content .fa {
+    margin-right: 3px;
+}
+.main .upload-box .content {
+    padding: 0;
+}
+.upload-box .upload-filename {
+    font-size: 14px;
+    overflow: hidden;
+    max-width: 200px;
+    height: 28px;
+    margin-right: 10px;
+    padding: 0 5px;
+    white-space: nowrap;
+    text-indent: 0;
+    text-overflow: ellipsis;
+}
+.upload-box .upload-filename.uploading {
+    text-indent: 18px;
+}
+.upload-box .uploading-icon {
+    position: absolute;
+    top: 9px;
+    left: 6px;
+    display: none;
+}
+.upload-box .upload-progress {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.upload-box .upload-progress .upload-icon,
+.upload-box .upload-progress .upload-tips {
+    display: inline-block;
+    vertical-align: middle;
+}
+.upload-box .upload-progress .upload-icon {
+    width: 16px;
+    height: 16px;
+    margin: -2px 5px 0 0 ;
+    background: url(/static/img/common/loading.gif) center center no-repeat transparent;
+}
+.upload-box .upload-progress,
+.upload-box .upload-result {
+    font-size: 13px;
+    color: #737373;
+}
+.upload-box .upload-result.follow {
+    line-height: 31px;
+    float: left;
+    margin-left: 5px;
+}
+.upload-box .upload-result .upload-success {
+    /*height: 19px;*/
+    color: #0a0;
+}
+.upload-box .upload-result .upload-error {
+    color: #f00;
+}
+.upload-success {
+  color: #0a0;
+}
+.upload-error {
+  color: #f00;
+}
+.upload-form-hidden {
+  margin-left: -999999px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/*sj-schedule*/
+.sj-schedule {
+  table-layout: fixed;
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+.sj-schedule td{
+  border: 1px solid #555;
+  width: 60px;
+  height: 20px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sj-schedule td {
+  width: auto;
+  cursor: pointer;
+}
+.sj-schedule td.yaxis {
+  border: none;
+  width: 40px;
+  text-align: left;
+  cursor: default;
+  user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+.sj-schedule td.xaxis {
+  border: none;
+  cursor: default;
+  text-align: left;
+  user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+.sj-schedule td.active {
+  background-color: #DAFCFE;
+}

@@ -1,0 +1,47 @@
+/*
+* @Author: lushijie
+* @Date:   2016-11-29 10:41:34
+* @Last Modified by:   lushijie
+* @Last Modified time: 2017-01-06 15:07:12
+*/
+@charset 'UTF-8';
+
+body {
+  position: relative;
+  background-color: #f5f5f5;
+}
+/*头部*/
+#hd {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 50px;
+  color: #fff;
+  width: 100%;
+  background-color: #181818;
+}
+/*左侧导航条*/
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 205px;
+  /*bug：右侧出滚动条的情况下，滚动条顶部有部分被隐藏*/
+  height: 100%;
+  overflow-y: auto;
+  background-color: #EBEFF2;
+}
+#nav-content {
+  padding-top: 50px;
+}
+/*页面主体*/
+#bd {
+  background-color: #F5F5F5;
+  margin-top: 50px;
+  padding-left: 205px;
+}
+/*页面主体——内容*/
+#bd-content{
+  height: 400px;
+}

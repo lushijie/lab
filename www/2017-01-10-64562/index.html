@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>vue 组件</title>
+    <link rel="stylesheet" href="../../static/module/jqueryui/jquery-ui.css">
+    <link rel="stylesheet" href="../../static/module/jqueryui/jquery-ui.fix.css">
+    <link rel="stylesheet" href="../../static/css/lib/font-awesome.css">
+    <link rel="stylesheet" href="../../static/css/lib/pure.css">
+    <link rel="stylesheet" href="../../static/css/common/common.css">
+    <link rel="stylesheet" href="./index.css">
+    <script type="text/javascript" src="../../static/js/lib/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 局部组件 -->
+      <div id="local">
+        <l-component p1="11" p2="22"/>
+      </div>
+
+      <!-- 全局组件 -->
+      <div id="global">
+        <!-- 动态prop -->
+        <input type="text" v-model="prop3" />
+        <g-component v-bind:p3="prop3" v-on:click_child="handleClickChild"/>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      // 全局组件
+      Vue.component('g-component', {
+        //props: ['p3'],
+        props: {
+          p3: [String, Number]
+        },
+        data: function() {
+          return {
+            initText: this.p3
+          }
+        },
+        methods: {
+          click_child: function(evt){
+            this.$emit('click_child', evt);
+          }
+        },
+        template: '<button v-on:click="click_child">{{initText}} - {{p3}}</button>'
+      })
+
+      // 局部组件
+      var Child = {
+        props: ['p1','p2'],
+        data: function() {
+          return {
+            counter: 0
+          }
+        },
+        template: '<button v-on:click="function(){counter++;}">A local component! {{counter}}-{{p1}}-{{p2}}</button>',
+      }
+
+      // Vue
+      new Vue({
+        el: '#app',
+        components: {
+          'l-component': Child
+        },
+        data: {
+          prop3: 'global'
+        },
+        methods: {
+          handleClickChild: function(evt) {
+            console.log(evt.target.tagName);
+          }
+        }
+      })
+
+    </script>
+    <script type="text/javascript" src="./stc.js"></script>
+  </body>
+</html>

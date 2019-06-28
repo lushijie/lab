@@ -1,0 +1,41 @@
+/*
+* @Author: lushijie
+* @Date:   2016-11-29 10:41:34
+* @Last Modified by:   lushijie
+* @Last Modified time: 2017-01-06 15:18:36
+*/
+@charset 'UTF-8';
+.parent1 {
+  height: 200px;
+  background-color: #ccc;
+}
+.child1 {
+  margin-top: 40px;
+  height: 100px;
+  background-color: #964;
+}
+
+.parent2 {
+  height: 200px;
+  background-color: #ccc;
+  /*overflow: auto;*/
+  /*auto hidden都可以*/
+  overflow: hidden;
+}
+.child2 {
+  margin-top: 40px;
+  height: 100px;
+  background-color: #964;
+}
+
+.parent3 {
+  height: 200px;
+  background-color: #ccc;
+  padding-top: 1px;
+  margin-top: -1px;
+}
+.child3 {
+  margin-top: 40px;
+  height: 100px;
+  background-color: #964;
+}
